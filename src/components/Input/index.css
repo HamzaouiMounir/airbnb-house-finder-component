@@ -1,0 +1,147 @@
+.searchBarInput {
+  background-color: white;
+  cursor: pointer;
+  padding: 8px 13px !important;
+  /*min-width: 236.75px;*/
+  flex: 1;
+  display: flex;
+  font-size: 0.8rem;
+  align-items: center;
+}
+
+.searchBarInput:last-child {
+  border-top-right-radius: 33px;
+  border-bottom-right-radius: 33px;
+}
+
+.searchBarInput:first-child {
+  border-top-left-radius: 33px;
+  border-bottom-left-radius: 33px;
+}
+.searchBarInput:not(:first-child)::before {
+  border-left: 1px solid gainsboro;
+  content: "";
+  position: absolute;
+  height: 50px;
+}
+
+.hoveredInput {
+  border-radius: 33px;
+  transition: 0.01s ease;
+  background-color: #ebebeb;
+}
+
+.hoveredInput:not(:first-child)::before {
+  content: "" !important;
+  height: 0;
+}
+.selectedSearchInput {
+  border-radius: 33px;
+  transition: 0.01s ease;
+  background-color: #fff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+  z-index: 99999;
+}
+
+.selectedSearchInput::before {
+  height: 0 !important;
+}
+
+.selectedSearchInput + .searchBarInput::before,
+.searchBarInput:hover + .searchBarInput {
+  border-left: none;
+  content: "" !important;
+}
+
+#searchInputText {
+  background-color: transparent;
+}
+
+.searchInputButton {
+  outline: none;
+  background: rgb(255, 56, 92);
+  border: none;
+  display: flex;
+  color: white;
+  min-width: 25px;
+  min-height: 25px;
+  max-height: 48px;
+  border-radius: 24px;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  flex-direction: row;
+  max-width: 100px;
+}
+
+.searchBarLabel {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+  user-select: none;
+}
+
+.searchBarLabel > form > input {
+  border: none;
+  height: 18px;
+  outline: none;
+}
+
+.defaultContainer {
+  padding: 8px 13px !important;
+  position: relative;
+}
+
+.searchResults {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  top: 66px;
+  margin: 0;
+  width: 450px;
+  min-height: 100px;
+  border-radius: 25px;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.searchGeneralSuggestion {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+  min-height: 70px;
+  align-items: center;
+  padding-left: 50px;
+
+}
+
+.suggestionMap {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: 8px;
+}
+
+.searchGeneralSuggestion a:visited {
+  color: inherit;
+}
+
+.searchGeneralSuggestion a {
+  font-size: 1.2em;
+  font-weight: lighter;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.searchGeneralSuggestion:hover {
+  background-color: #F8F8F8	;
+}

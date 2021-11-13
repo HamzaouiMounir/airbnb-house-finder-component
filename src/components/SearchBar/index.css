@@ -1,0 +1,32 @@
+.searchBarWrapper {
+  display: flex;
+  flex-direction: row;
+  border-radius: 33px;
+  box-sizing: border-box;
+  width: auto;
+  flex-grow: inherit;
+  padding: 0;
+  border: 1px solid #dddddd !important;
+  width: 850px;
+  height: 66px;
+  background-color: #ffffff !important;
+}
+
+/*helpers*/
+.lightText {
+  font-weight: lighter;
+}
+.dimmed {
+  color: #777;
+}
+.centeredContent {
+  justify-content: center;
+}
+
+.guestFilterWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 13px !important;
+  align-items: center;
+  width: 100%;
+}
